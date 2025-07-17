@@ -1,0 +1,56 @@
+@reference "../index.css";
+
+h1 {
+  @apply text-f-h1;
+}
+
+h2 {
+  @apply text-f-h2;
+}
+
+h3 {
+  @apply text-f-h3;
+}
+
+h4 {
+  @apply text-f-h4;
+}
+
+h5 {
+  @apply text-f-h5;
+}
+
+h6 {
+  @apply text-f-h6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-theme-headings dark:text-themedark-headings leading-[1.2];
+}
+
+body {
+  @apply text-base leading-normal text-theme-bodycolor dark:text-themedark-bodycolor bg-theme-bodybg dark:bg-themedark-bodybg;
+}
+
+b,
+strong {
+  @apply font-normal;
+}
+
+.text-muted {
+  @apply text-theme-secondarytextcolor dark:text-themedark-secondarytextcolor;
+}
+
+.material-icons-two-tone {
+  @apply bg-clip-text;
+  -webkit-text-fill-color: transparent;
+
+  &:not([class*="bg-"]) {
+    @apply bg-theme-bodycolor dark:bg-themedark-bodycolor;
+  }
+}

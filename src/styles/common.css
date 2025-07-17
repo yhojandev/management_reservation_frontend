@@ -1,0 +1,41 @@
+@reference "../index.css";
+
+.pc-container {
+  @apply relative max-lg:ml-0 ltr:lg:ml-sidebar-width rtl:lg:mr-sidebar-width top-header-height min-h-[calc(100vh_-_135px)] transition-all duration-200 ease-in-out;
+
+  .pc-content {
+    @apply max-sm:p-[15px] px-10 pt-5;
+  }
+}
+
+.page-header {
+  @apply max-sm:px-2.5 mb-6;
+
+  .breadcrumb {
+    @apply text-[13px];
+  }
+}
+
+.pc-footer {
+  @apply relative z-[995] max-lg:ml-0 ltr:lg:ml-sidebar-width rtl:lg:mr-sidebar-width mt-header-height py-[15px] transition-all duration-200 ease-in-out;
+}
+
+.pc-sidebar {
+  &.pc-sidebar-hide {
+    ~ .pc-header {
+      @apply ltr:lg:left-0 rtl:lg:right-0;
+    }
+
+    ~ .pc-container,
+    ~ .pc-footer {
+      @apply ltr:lg:ml-0 rtl:lg:mr-0;
+    }
+  }
+}
+
+.footer-wrapper,
+.pc-content {
+  &.container {
+    @apply mx-auto md:max-w-[540px] lg:max-w-[720px] lg:max-w-[960px] 2xl:max-w-[1140px];
+  }
+}
