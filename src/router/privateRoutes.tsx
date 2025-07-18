@@ -5,7 +5,9 @@ import Users from "@pages/users/Users";
 import Roles from "@pages/roles/Roles";
 import Operators from "@pages/operators/Operators";
 import Reservations from "@pages/reservations/Reservations";
+import Register from "@pages/auth/Register";
 // import ProtectedRoute from "./ProtectedRoute";
+import AuthLayout from "@layouts/AuthLayout";
 
 const privateRoutes: RouteObject[] = [
   {
@@ -19,6 +21,15 @@ const privateRoutes: RouteObject[] = [
       { path: "operators", element: <Operators /> },
       { path: "reservations", element: <Reservations /> },
     ],
+  },
+
+  {
+    path: "/register",
+    element: (
+      <AuthLayout>
+        <Register />
+      </AuthLayout>
+    ),
   },
 ];
 

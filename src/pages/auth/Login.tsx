@@ -65,7 +65,7 @@ const Login = () => {
                   type="checkbox"
                   id="customCheckc1"
                 />
-                <span className="pl-2">Remember me?</span>
+                <span className="pl-2">Recordarme?</span>
               </label>
             </div>
             <h6 className="font-normal !text-primary-500 mb-0">
