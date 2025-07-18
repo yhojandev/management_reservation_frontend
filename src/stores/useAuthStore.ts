@@ -30,8 +30,8 @@ export const useAuthStore = create<AuthState>((set, get) => ({
 
   login: async (credentials) => {
     try {
-      const res = await login(credentials);
-      const token = res.data.accessToken;
+      const dataFromApi = await login(credentials);
+      const token = dataFromApi.accessToken;
       localStorage.setItem("accessToken", token);
       const decoded: JwtPayload = jwtDecode(token);
       set({ user: decoded.name || decoded.sub });
